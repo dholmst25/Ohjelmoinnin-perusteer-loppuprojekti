@@ -2,7 +2,7 @@ ETENEMINEN
 
 1. Hotellivarausjärjestelmä (kuka suunnittelee, mitä sisältää)
 
-Huoneiden yksityiskohdat: 
+Huoneiden yksityiskohdat: hhg
 
 Vapaana olevat huoneet näkyviin:
 
