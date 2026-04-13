@@ -13,7 +13,6 @@ def startmenu():
                 return StartDecision
             else:
                 print("Incorrect value given. Try again.")
-                startmenu()
         except ValueError:
             print("Invalid number given. Please try again.")
 choice = startmenu()
