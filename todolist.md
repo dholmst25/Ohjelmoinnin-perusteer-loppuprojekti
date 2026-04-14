@@ -2,15 +2,15 @@ ETENEMINEN
 
 1. Hotellivarausjärjestelmä (kuka suunnittelee, mitä sisältää)
 
-Huoneiden yksityiskohdat:
+Huoneiden yksityiskohdat: Daniel 👍
 
-Vapaana olevat huoneet näkyviin:
+Vapaana olevat huoneet näkyviin: Daniel
 
-Huoneen varaaminen:
+Huoneen varaaminen: Markus
 
-Uloskirjaus:
+Uloskirjaus: Markus👍
 
-Varatut huoneet ei näkyvillä: 
+Varatut huoneet ei näkyvillä: Daniel
 
 Mahdolliset lisäykset (jos jää aikaa):
 
