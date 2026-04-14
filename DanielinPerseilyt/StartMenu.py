@@ -1,9 +1,9 @@
 def startmenu():
     print("┌───────────────────────────────────────────────┐")
-    print("|1 = Add room details                           |")
-    print("|2 = View all available rooms                   |") 
-    print("|3 = Book a room                                |") 
-    print("|4 = Check-out                                  |") 
+    print("|1 = View all available rooms                   |")
+    print("|2 = Book a room                                |") 
+    print("|3 = Check-out                                  |") 
+    print("|4 = Add room listing                           |") 
     print("|5 = Remove room listing                        |")
     print("|6 = Exit the program                           |")
     print("└───────────────────────────────────────────────┘")
