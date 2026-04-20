@@ -31,7 +31,12 @@ while True:
         print(f"You have selected option {choice}")
         print("Ho ho ho!")
     elif choice == 2:
-        print("Add here")
+        for room in HotelRooms.rooms:
+            if room["room_availability"] == "Yes":
+                print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+                print(f"|Room {room['room_id']} | {room['room_name']} | {room['rooms_beds']} | {room['room_cost']}  | {room['room_breakfast']} | {room['room_availability']}       |")
+                print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+        input("Enter to continue:")
     elif choice == 3:
         try:
             room_id = int(input("Anna huoneen ID: "))
