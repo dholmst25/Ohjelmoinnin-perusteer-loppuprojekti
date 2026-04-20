@@ -4,12 +4,11 @@ rooms = [
     {"room_id": 103, "room_name": "Standard family", "rooms_beds": "Single king size and two single beds  ", "room_cost": 350, "room_breakfast": "Not Included", "room_availability": "Yes"},
     {"room_id": 104, "room_name": "Exclusive suite", "rooms_beds": "Three king size beds in seperate rooms", "room_cost": 700, "room_breakfast": "Included    ", "room_availability": "Yes"},
 ]
-
-print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
-print("| Room ID | Name            | Bed Configuration                      | Cost | Breakfast    | Available |")
-print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
-for room in rooms:
-  if room["room_availability"] == "Yes":
-    print(f"|Room {room['room_id']} | {room['room_name']} | {room['rooms_beds']} | {room['room_cost']}  | {room['room_breakfast']} | {room['room_availability']}       |")
-
-print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+def room_availability():
+  print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+  print("| Room ID | Name            | Bed Configuration                      | Cost | Breakfast    | Available |")
+  print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+  for room in rooms:
+    if room["room_availability"] == "Yes":
+      print(f"|Room {room['room_id']} | {room['room_name']} | {room['rooms_beds']} | {room['room_cost']}  | {room['room_breakfast']} | {room['room_availability']}       |")
+  print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
