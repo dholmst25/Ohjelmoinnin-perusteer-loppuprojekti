@@ -10,5 +10,10 @@ def book_room(room_id, rooms):
                 return "Huone on jo varattu!"
     return "Huonetta ei löytynyt!"
 
-
-print(book_room(104, HotelRooms.rooms))
+try:
+    room_id = int(input("Anna huoneen ID: "))
+except ValueError:
+    print("Huoneen ID täytyy olla numero.")
+else:
+    result = book_room(room_id, HotelRooms.rooms)
+    print(result)
