@@ -1,3 +1,6 @@
+import HotelRooms
+from Room_booking import book_room
+
 def startmenu():
     print("+-----------------------------------------------+")
     print("|1 = View all available rooms                   |")
@@ -28,11 +31,16 @@ while True:
         print(f"You have selected option {choice}")
         print("Ho ho ho!")
     elif choice == 2:
-        print(f"You have selected option {choice}")
-        print("Hahaa")
+        print("Add here")
     elif choice == 3:
-        print(f"You have selected option {choice}")
-        print("Hoo")
+        try:
+            room_id = int(input("Anna huoneen ID: "))
+        except ValueError:
+            print("Huoneen ID täytyy olla numero.")
+        else:
+            result = book_room(room_id, HotelRooms.rooms)
+            print(result)
+        input("Enter to continue:")
     elif choice == 4:
         print(f"You have selected option {choice}")
         print("Sazam!")
