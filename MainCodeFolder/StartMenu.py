@@ -1,5 +1,6 @@
 import HotelRooms
 from Room_booking import book_room
+from RoomAvailabilityAndNewRooms import add_room, remove_room, room_availability
 
 def startmenu():
     print("+-----------------------------------------------+")
@@ -29,7 +30,7 @@ while True:
 
     if choice == 1:
         print(f"You have selected option {choice}")
-        print("Ho ho ho!")
+        room_availability(HotelRooms.rooms)
     elif choice == 2:
         for room in HotelRooms.rooms:
             if room["room_availability"] == "Yes":
@@ -47,11 +48,13 @@ while True:
             print(result)
         input("Enter to continue:")
     elif choice == 4:
-        print(f"You have selected option {choice}")
-        print("Sazam!")
+        result = add_room(HotelRooms.rooms)
+        print(result)
+        input("Enter to continue:")
     elif choice == 5:
-        print(f"You have selected option {choice}")
-        print("Haha")
+        result = remove_room(HotelRooms.rooms)
+        print(result)
+        input("Enter to continue:")
     elif choice == 6:
         print(f"You have selected option {choice}")
         exit_program()
