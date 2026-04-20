@@ -5,10 +5,10 @@ def book_room(room_id, rooms):
         if room["room_id"] == room_id:
             if room["room_availability"]:
                 room["room_availability"] = False
-                return "Room booked successfully!"
+                return "Huone varattu onnistuneesti!"
             else:
-                return "Room already booked!"
-    return "Room not found!"
+                return "Huone on jo varattu!"
+    return "Huonetta ei löytynyt!"
 
 
 print(book_room(104, HotelRooms.rooms))
