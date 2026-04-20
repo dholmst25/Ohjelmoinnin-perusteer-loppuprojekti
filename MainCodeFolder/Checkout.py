@@ -9,5 +9,13 @@ def Checkout(rooms, room_id):
             return
     print("Huonetta ei löydy")
 
-room_id = int(input("Anna huoneen numero jossa olit:"))
-Checkout(rooms, room_id)
+while True:
+    print("1. Checkout")
+    print("2. Exit")
+    choice = input("Valinta:")
+
+    if choice == "1":
+        room_id = int(input("Anna huoneen numero jossa olit:"))
+        Checkout(rooms, room_id)
+    elif choice == "2":
+        break
