@@ -1,12 +1,12 @@
 def startmenu():
-    print("┌───────────────────────────────────────────────┐")
+    print("+-----------------------------------------------+")
     print("|1 = View all available rooms                   |")
     print("|2 = Book a room                                |") 
     print("|3 = Check-out                                  |") 
     print("|4 = Add room listing                           |") 
     print("|5 = Remove room listing                        |")
     print("|6 = Exit the program                           |")
-    print("└───────────────────────────────────────────────┘")
+    print("+-----------------------------------------------+")
     while True:
         try:
             StartDecision = int(input("Enter a number (1-6)"))
