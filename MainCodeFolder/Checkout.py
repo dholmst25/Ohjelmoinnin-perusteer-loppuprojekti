@@ -1,11 +1,13 @@
-def check_out(hotel, room_number):
+def Checkout(rooms, room_id):
     for room in rooms:
-        if room.number == room_number:
-            if not room.is_available:
-                print(f"Room {room_number} is now free (guest was {room.guest}).")
-                room.is_available = True
-                room.guest = None
+        if room["room_id"] == room_id:
+            if room["available"]:
+                print("Huone on jo vapaa")
             else:
-                print("Room is already free")
+                room["available"] = True
+                print(f"Checkout onnistui. Huone {room_id} on nyt vapaa.")
             return
-    print("Room not found")
+    print("Huonetta ei löydy")
+
+room_id = int(input("Anna huoneen numero jossa olit:"))
+checkout(rooms, room_id)
