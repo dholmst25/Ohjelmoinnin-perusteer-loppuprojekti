@@ -17,7 +17,7 @@ def startmenu():
     while True:
         try:
             StartDecision = int(input("Enter a number (1-6)"))
-            if 1 <= StartDecision <= 6: #Käytetään numeroita 1-6 aloittamaan eri osat ohjelmaa ja turvataan, jos käyttäjä antaa väärän numeron.
+            if 1 <= StartDecision <= 7: #Käytetään numeroita 1-6 aloittamaan eri osat ohjelmaa ja turvataan, jos käyttäjä antaa väärän numeron.
                 return StartDecision
             else:
                 print("Incorrect value given. Try again.")
@@ -56,6 +56,8 @@ while True:
         print(f"You have selected option {choice}")
         print("Haha")
     elif choice == 6:
+        print(f"You have selected option {choice}")
+    elif choice == 7:
         print(f"You have selected option {choice}")
         exit_program()
         break
