@@ -1,5 +1,7 @@
 import HotelRooms
 from RoomAvailabilityAndNewRooms import room_availability
+from RoomAvailabilityAndNewRooms import add_room
+from RoomAvailabilityAndNewRooms import remove_room
 from Checkout import Checkout
 from Room_booking import book_room
 from searchtab import search_menu
@@ -36,7 +38,7 @@ while True:
         print(search)
         input("\nEnter to continue:")
     elif choice == 2:
-        available = room_availability()
+        available = room_availability(HotelRooms.rooms)
         print(available)
         input("\nEnter to continue:")
     elif choice == 3:
@@ -53,10 +55,11 @@ while True:
         Checkout(HotelRooms.rooms, room_id)
         input("\nEnter to continue:")
     elif choice == 5:
-        print(f"You have selected option {choice}")
-        print("Haha")
+        add = add_room(HotelRooms.rooms)
+        print(add)
     elif choice == 6:
-        print(f"You have selected option {choice}")
+        remove = remove_room(HotelRooms.rooms)
+        print(remove)
     elif choice == 7:
         print(f"You have selected option {choice}")
         exit_program()

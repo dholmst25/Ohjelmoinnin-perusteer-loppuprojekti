@@ -1,14 +1,64 @@
-rooms = [
-    {"room_id": 101, "room_name": "Standard queen ", "rooms_beds": "One queen size bed                    ", "room_cost": 120, "room_breakfast": "Not Included", "room_availability": "No"}, 
-    {"room_id": 102, "room_name": "Standard king  ", "rooms_beds": "One king size bed                     ", "room_cost": 180, "room_breakfast": "Included    ", "room_availability": "Being cleaned"},
-    {"room_id": 103, "room_name": "Standard family", "rooms_beds": "Single king size and two single beds  ", "room_cost": 350, "room_breakfast": "Not Included", "room_availability": "Yes"},
-    {"room_id": 104, "room_name": "Exclusive suite", "rooms_beds": "Three king size beds in seperate rooms", "room_cost": 700, "room_breakfast": "Included    ", "room_availability": "Yes"},
-]
-def room_availability():
-  print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
-  print("| Room ID | Name            | Bed Configuration                      | Cost | Breakfast    | Available |")
-  print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
-  for room in rooms:
-    if room["room_availability"] == "Yes":
-      print(f"|Room {room['room_id']} | {room['room_name']} | {room['rooms_beds']} | {room['room_cost']}  | {room['room_breakfast']} | {room['room_availability']}       |")
-  print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+import HotelRooms
+
+# ------------------ SHOW AVAILABLE ROOMS ------------------
+def room_availability(rooms):
+    print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+    print("| Room ID | Name            | Bed Configuration                      | Cost | Breakfast    | Available |")
+    print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+
+    for room in rooms:
+        if room["room_availability"] == "Yes":
+            print(f"| {room['room_id']}      | {room['room_name']} | {room['rooms_beds']} | {room['room_cost']}  | {room['room_breakfast']} | {room['room_availability']}       |")
+
+    print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+
+
+# ------------------ ADD ROOM ------------------
+def add_room(rooms):
+    try:
+        room_id = int(input("Enter new room ID: "))
+    except ValueError:
+        return "Room ID must be a number."
+
+    # tarkistetaan ettei ID ole jo käytössä
+    for room in rooms:
+        if room["room_id"] == room_id:
+            return "Room with this ID already exists!"
+
+    room_name = input("Enter room name: ")
+    rooms_beds = input("Enter bed configuration: ")
+
+    try:
+        room_cost = int(input("Enter room cost: "))
+    except ValueError:
+        return "Cost must be a number."
+
+    room_breakfast = input("Breakfast (Included/Not Included): ")
+    room_availability = input("Availability (Yes/No/Being cleaned): ")
+
+    new_room = {
+        "room_id": room_id,
+        "room_name": room_name,
+        "rooms_beds": rooms_beds,
+        "room_cost": room_cost,
+        "room_breakfast": room_breakfast,
+        "room_availability": room_availability
+    }
+
+    rooms.append(new_room)
+    return "Room added successfully!"
+
+
+# ------------------ REMOVE ROOM ------------------
+def remove_room(rooms):
+    try:
+        room_id = int(input("Enter room ID to remove: "))
+    except ValueError:
+        return "Room ID must be a number."
+
+    for room in rooms:
+        if room["room_id"] == room_id:
+            rooms.remove(room)
+            return "Room removed successfully!"
+
+    return "Room not found!"
