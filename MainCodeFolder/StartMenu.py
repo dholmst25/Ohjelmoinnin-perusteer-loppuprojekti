@@ -1,16 +1,18 @@
 import HotelRooms
+from RoomAvailabilityAndNewRooms import room_availability
 from Checkout import Checkout
 from Room_booking import book_room
 from searchtab import search_menu
 
 def startmenu():
     print("+-----------------------------------------------+")
-    print("|1 = Search for available rooms                 |")
-    print("|2 = Book a room                                |") 
-    print("|3 = Check-out                                  |") 
-    print("|4 = Add room listing                           |") 
-    print("|5 = Remove room listing                        |")
-    print("|6 = Exit the program                           |")
+    print("|1 = Search for rooms                           |")
+    print("|2 = List all available rooms                   |") 
+    print("|3 = Book a room                                |") 
+    print("|4 = Check-out                                  |") 
+    print("|5 = Add room listing (admin only)              |")
+    print("|6 = Remove room listing                        |")
+    print("|7 = Exit the program                           |")
     print("+-----------------------------------------------+")
     while True:
         try:
@@ -34,13 +36,8 @@ while True:
         print(search)
         input("\nEnter to continue:")
     elif choice == 2:
-        print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
-        print("| Room ID | Name            | Bed Configuration                      | Cost | Breakfast    | Available |")
-        print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
-        for room in HotelRooms.rooms:
-            if room["room_availability"] == "Yes":
-                print(f"|Room {room['room_id']} | {room['room_name']} | {room['rooms_beds']} | {room['room_cost']}  | {room['room_breakfast']} | {room['room_availability']}       |")
-                print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+        available = room_availability()
+        print(available)
         input("\nEnter to continue:")
     elif choice == 3:
         try:
