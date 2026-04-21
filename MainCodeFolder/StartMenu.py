@@ -11,7 +11,7 @@ def startmenu():
     print("|3 = Book a room                                |") 
     print("|4 = Check-out                                  |") 
     print("|5 = Add room listing (admin only)              |")
-    print("|6 = Remove room listing                        |")
+    print("|6 = Remove room listing (admin only)           |")
     print("|7 = Exit the program                           |")
     print("+-----------------------------------------------+")
     while True:
