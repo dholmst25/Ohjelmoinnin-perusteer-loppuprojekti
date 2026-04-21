@@ -61,6 +61,6 @@ while True:
         remove = remove_room(HotelRooms.rooms)
         print(remove)
     elif choice == 7:
-        print(f"You have selected option {choice}")
+        print(f"Goodbye!")
         exit_program()
         break
