@@ -1,5 +1,7 @@
 import HotelRooms
+from Checkout import Checkout
 from Room_booking import book_room
+from searchtab import search_menu
 
 def startmenu():
     print("+-----------------------------------------------+")
@@ -28,27 +30,31 @@ while True:
     choice = startmenu()
 
     if choice == 1:
-        print(f"You have selected option {choice}")
-        print("Ho ho ho!")
+        search = search_menu()
+        print(search)
+        input("\nEnter to continue:")
     elif choice == 2:
+        print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+        print("| Room ID | Name            | Bed Configuration                      | Cost | Breakfast    | Available |")
+        print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
         for room in HotelRooms.rooms:
             if room["room_availability"] == "Yes":
-                print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
                 print(f"|Room {room['room_id']} | {room['room_name']} | {room['rooms_beds']} | {room['room_cost']}  | {room['room_breakfast']} | {room['room_availability']}       |")
                 print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
-        input("Enter to continue:")
+        input("\nEnter to continue:")
     elif choice == 3:
         try:
-            room_id = int(input("Book room by room ID: "))
+            room_id = int(input("Anna huoneen ID: "))
         except ValueError:
-            print("Room ID must be a number.")
+            print("Huoneen ID täytyy olla numero.")
         else:
             result = book_room(room_id, HotelRooms.rooms)
             print(result)
-        input("Enter to continue:")
+        input("\nEnter to continue:")
     elif choice == 4:
-        print(f"You have selected option {choice}")
-        print("Sazam!")
+        room_id = int(input("Anna huoneen numero jossa olit:"))
+        Checkout(HotelRooms.rooms, room_id)
+        input("\nEnter to continue:")
     elif choice == 5:
         print(f"You have selected option {choice}")
         print("Haha")
