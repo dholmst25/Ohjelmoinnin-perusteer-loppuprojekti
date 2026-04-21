@@ -39,9 +39,9 @@ while True:
         input("Enter to continue:")
     elif choice == 3:
         try:
-            room_id = int(input("Anna huoneen ID: "))
+            room_id = int(input("Book room by room ID: "))
         except ValueError:
-            print("Huoneen ID täytyy olla numero.")
+            print("Room ID must be a number.")
         else:
             result = book_room(room_id, HotelRooms.rooms)
             print(result)
