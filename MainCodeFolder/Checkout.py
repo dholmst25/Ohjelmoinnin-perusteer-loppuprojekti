@@ -8,6 +8,7 @@ def Checkout(rooms, room_id):
                 print("Huone on jo vapaa")
             else:
                 room["room_availability"] == "No"
+                room["room_availability"] = "Yes"
                 print(f"Checkout onnistui. Huone {room_id} on nyt vapaa.")
             return
     print("Huonetta ei löydy")

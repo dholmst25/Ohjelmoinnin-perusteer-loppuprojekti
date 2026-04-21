@@ -18,7 +18,7 @@ def startmenu():
     print("+-----------------------------------------------+")
     while True:
         try:
-            StartDecision = int(input("Enter a number (1-6)"))
+            StartDecision = int(input("Enter a number (1-7)"))
             if 1 <= StartDecision <= 7: #Käytetään numeroita 1-6 aloittamaan eri osat ohjelmaa ja turvataan, jos käyttäjä antaa väärän numeron.
                 return StartDecision
             else:
@@ -43,23 +43,25 @@ while True:
         input("\nEnter to continue:")
     elif choice == 3:
         try:
-            room_id = int(input("Anna huoneen ID: "))
+            room_id = int(input("Give room ID: "))
         except ValueError:
-            print("Huoneen ID täytyy olla numero.")
+            print("Room ID must be a number.")
         else:
             result = book_room(room_id, HotelRooms.rooms)
             print(result)
         input("\nEnter to continue:")
     elif choice == 4:
-        room_id = int(input("Anna huoneen numero jossa olit:"))
+        room_id = int(input("Give the ID of the room you had:"))
         Checkout(HotelRooms.rooms, room_id)
         input("\nEnter to continue:")
     elif choice == 5:
         add = add_room(HotelRooms.rooms)
         print(add)
+        input("\nEnter to continue:")
     elif choice == 6:
         remove = remove_room(HotelRooms.rooms)
         print(remove)
+        input("\nEnter to continue:")
     elif choice == 7:
         print(f"Goodbye!")
         exit_program()
