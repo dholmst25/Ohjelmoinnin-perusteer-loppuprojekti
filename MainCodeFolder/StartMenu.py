@@ -5,7 +5,7 @@ from searchtab import search_menu
 
 def startmenu():
     print("+-----------------------------------------------+")
-    print("|1 = View all available rooms                   |")
+    print("|1 = Search for available rooms                 |")
     print("|2 = Book a room                                |") 
     print("|3 = Check-out                                  |") 
     print("|4 = Add room listing                           |") 
