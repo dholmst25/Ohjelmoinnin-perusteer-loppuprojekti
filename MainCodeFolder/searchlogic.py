@@ -6,6 +6,8 @@ def search_rooms(max_cost=None, bed_keyword=None, room_type_keyword=None):      
     for room in HotelRooms.rooms:                                               
         if room["room_availability"] == "No":                                   # Has to be available
             continue
+        if room["room_availability"] == "Being cleaned":                        # Has to be available
+            continue
         if max_cost is not None:                                                # Maximum cost
             if room["room_cost"] > max_cost:                                    # Skips prices too high
                 continue
