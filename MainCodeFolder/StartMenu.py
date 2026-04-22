@@ -1,4 +1,5 @@
 import HotelRooms
+import time
 from RoomAvailabilityAndNewRooms import room_availability
 from RoomAvailabilityAndNewRooms import add_room
 from RoomAvailabilityAndNewRooms import remove_room
@@ -43,7 +44,10 @@ while True:
         input("\nEnter to continue:")
     elif choice == 3:
         try:
+            print("\nWelcome to booking system!")
             room_id = int(input("Give room ID: "))
+            print("Processing...")
+            time.sleep(2.5)
         except ValueError:
             print("Room ID must be a number.")
         else:
