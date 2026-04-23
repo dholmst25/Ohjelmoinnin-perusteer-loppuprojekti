@@ -4,14 +4,14 @@ ETENEMINEN
 
 Huoneiden yksityiskohdat: Daniel 👍
 
-Vapaana olevat huoneet näkyviin: Daniel 👍
+Vapaana olevat huoneet näkyviin: Daniel & Miska 👍
 
 Varatut huoneet ei näkyvillä: Daniel 👍
 
 
 Huoneen varaaminen: Markus
 
-Uloskirjaus: Jesse👍
+Uloskirjaus: Markus & Jesse👍
 
 
 Huonehaku: Jonna 👍
