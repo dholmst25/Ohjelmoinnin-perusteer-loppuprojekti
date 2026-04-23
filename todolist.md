@@ -6,11 +6,19 @@ Huoneiden yksityiskohdat: Daniel 👍
 
 Vapaana olevat huoneet näkyviin: Daniel 👍
 
+Varatut huoneet ei näkyvillä: Daniel 👍
+
+
 Huoneen varaaminen: Markus
 
 Uloskirjaus: Markus👍
 
-Varatut huoneet ei näkyvillä: Daniel 👍
+
+Huonehaku: Jonna 👍
+
+
+Huoneiden lisääminen & poistaminen: Miska
+
 
 Mahdolliset lisäykset (jos jää aikaa):
 
