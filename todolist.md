@@ -11,7 +11,7 @@ Varatut huoneet ei näkyvillä: Daniel 👍
 
 Huoneen varaaminen: Markus
 
-Uloskirjaus: Markus👍
+Uloskirjaus: Jesse👍
 
 
 Huonehaku: Jonna 👍
