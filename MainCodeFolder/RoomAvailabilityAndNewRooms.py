@@ -1,16 +1,22 @@
 import HotelRooms
 
 # ------------------ SHOW AVAILABLE ROOMS ------------------
+id_w, name_w, bed_w, cost_w, break_w, avail_w = 7, 15, 39, 4, 12, 13 #W = width
 def room_availability(rooms):
-    print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
-    print("| Room ID | Name            | Bed Configuration                      | Cost | Breakfast    | Available |")
-    print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+    print("+---------+-----------------+-----------------------------------------+------+--------------+---------------+")
+    print("| Room ID | Name            | Bed Configuration                       | Cost | Breakfast    | Available     |")
+    print("+---------+-----------------+-----------------------------------------+------+--------------+---------------+")
 
     for room in rooms:
         if room["room_availability"] == "Yes":
-            print(f"| {room['room_id']}     | {room['room_name']} | {room['rooms_beds']} | {room['room_cost']}  | {room['room_breakfast']} | {room['room_availability']}       |")
+            print(f"| {room['room_id']:<{id_w}} | "
+                  f"{room['room_name']:<{name_w}} | "
+                  f"{room['rooms_beds']:<{bed_w}} | "
+                  f"{room['room_cost']:<{cost_w}} | "
+                  f"{room['room_breakfast']:<{break_w}} | "
+                  f"{room['room_availability']:<{avail_w}} |")
 
-    print("+---------+-----------------+----------------------------------------+------+--------------+-----------+")
+    print("+---------+-----------------+-----------------------------------------+------+--------------+---------------+")
 
 
 # ------------------ ADD ROOM ------------------
