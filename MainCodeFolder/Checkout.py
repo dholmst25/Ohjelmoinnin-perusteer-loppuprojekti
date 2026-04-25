@@ -2,6 +2,12 @@ import HotelRooms
 
 
 def Checkout(rooms, room_id):
+    try:
+        room_id = int(room_id)
+    except ValueError:
+        return "Room ID must be a number."
+    
+    
     for room in rooms:
         if room["room_id"] == room_id:
             if room["room_availability"] == "Yes":
