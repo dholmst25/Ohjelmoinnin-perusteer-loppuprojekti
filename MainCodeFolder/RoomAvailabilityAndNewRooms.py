@@ -20,9 +20,13 @@ def room_availability(rooms):
 
 
 # ------------------ ADD ROOM ------------------
-def add_room(rooms):
+def add_room(rooms): 
     try:
-        room_id = int(input("Enter new room ID: "))
+        room_id_check = int(input("Enter new room ID (1-999): "))
+        if 1 <= room_id_check <= 999:
+            room_id = room_id_check
+        else:
+            return "Maximum room id number is 999."
     except ValueError:
         return "Room ID must be a number."
 
@@ -31,16 +35,56 @@ def add_room(rooms):
         if room["room_id"] == room_id:
             return "Room with this ID already exists!"
 
-    room_name = input("Enter room name: ")
-    rooms_beds = input("Enter bed configuration: ")
-
+    try: 
+        room_name = input("Enter room name (Max character limit is 15): ")[:name_w] #Limits name length
+    except ValueError:
+        return "Maximum room name character limit is 15"
     try:
-        room_cost = int(input("Enter room cost: "))
+        rooms_beds = input("Enter bed configuration (Max character limit is 39): ")[:bed_w]
+    except ValueError:
+        return "Maximum room configuration character limit is 39"
+    try:
+        room_cost_check = int(input("Enter room cost (1-9999): "))
+        if 1 <= room_cost_check <= 9999:
+            room_cost = room_cost_check
+        else:
+            return "Maximum room cost is 9999"
     except ValueError:
         return "Cost must be a number."
 
-    room_breakfast = input("Breakfast (Included/Not Included): ")
-    room_availability = input("Availability (Yes/No/Being cleaned): ")
+    try:
+        print("Breakfast")
+        print("1 = Included")
+        print("2 = Not Included")
+        room_breakfast_check = int(input("Enter a number (1-2):"))
+        if 1 <= room_breakfast_check <= 2:
+            if room_breakfast_check == 1:
+                room_breakfast = "Included"
+            elif room_breakfast_check == 2:
+                room_breakfast = "Not Included"
+            else:
+                return "Incorrect value given."
+    except ValueError:
+        return "Invalid number given."
+    
+    try:
+        print("Availability")
+        print("1 = Yes")
+        print("2 = No")
+        print("3 = Being cleaned")
+        room_availability_check = int(input("Enter a number (1-3):"))
+        if 1 <= room_availability_check <= 2:
+            if room_availability_check == 1:
+                room_availability = "Yes"
+            elif room_availability_check == 2:
+                room_availability = "No"
+            elif room_availability_check == 3:
+                room_availability = "Being cleaned"
+        else:
+            return "Incorrect value given."
+    except ValueError:
+            return "Invalid number given."
+    
 
     new_room = {
         "room_id": room_id,
