@@ -28,8 +28,8 @@ def startmenu():
                 print("Invalid number given. Please try again.")
 
 def exit_program():
+    print(f"Goodbye!")
     print("Thank you for choosing us!")
-    return False
 
 while True:
     choice = startmenu()
@@ -56,6 +56,5 @@ while True:
         print(remove)
         input("\nEnter to continue:")
     elif choice == 7:
-        print(f"Goodbye!")
         exit_program()
         break
