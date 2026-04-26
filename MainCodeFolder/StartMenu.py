@@ -44,12 +44,10 @@ while True:
         input("\nEnter to continue:")
     elif choice == 3:
         print("\nWelcome to booking system!")
-        room_id = int(input("Give room ID: "))
-        print(book_room(room_id, HotelRooms.rooms))
-        input("\nEnter to continue:")        
+        book_room(HotelRooms.rooms)
+        input("\nEnter to continue:")       
     elif choice == 4:
-        room_id = int(input("Give the ID of the room you had:"))
-        Checkout(HotelRooms.rooms, room_id)
+        Checkout(HotelRooms.rooms)
         input("\nEnter to continue:")
     elif choice == 5:
         add = add_room(HotelRooms.rooms)
