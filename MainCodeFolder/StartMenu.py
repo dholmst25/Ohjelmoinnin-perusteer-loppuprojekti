@@ -35,12 +35,10 @@ while True:
     choice = startmenu()
 
     if choice == 1:
-        search = search_menu()
-        print(search)
+        search_menu()
         input("\nEnter to continue:")
     elif choice == 2:
-        available = room_availability(HotelRooms.rooms)
-        print(available)
+        room_availability(HotelRooms.rooms)
         input("\nEnter to continue:")
     elif choice == 3:
         print("\nWelcome to booking system!")
