@@ -14,8 +14,8 @@ def Checkout(rooms):
             elif room["room_availability"] == "Being cleaned":
                 print("Room not available!")
             elif room["room_availability"] == "No":
-                room["room_availability"] = "Yes"
-                print(f"Checkout successful. Room {room_id} is now available.")
+                room["room_availability"] = "Being cleaned"
+                print(f"Checkout successful. Room {room_id} is now being cleaned.")
             break
     else:           
         print("Room not found!")
