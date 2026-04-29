@@ -6,6 +6,7 @@ from RoomAvailabilityAndNewRooms import remove_room
 from Checkout import Checkout
 from Room_booking import book_room
 from searchtab import search_menu
+from Cleaning import Cleaning
 
 def startmenu():
     print("+-----------------------------------------------+")
@@ -13,9 +14,10 @@ def startmenu():
     print("|2 = List all available rooms                   |") 
     print("|3 = Book a room                                |") 
     print("|4 = Check-out                                  |") 
-    print("|5 = Add room listing (admin only)              |")
-    print("|6 = Remove room listing (admin only)           |")
-    print("|7 = Exit the program                           |")
+    print("|5 = Clean room (cleaning staff only)           |")
+    print("|6 = Add room listing (admin only)              |")
+    print("|7 = Remove room listing (admin only)           |")
+    print("|8 = Exit the program                           |")
     print("+-----------------------------------------------+")
     while True:
         try:
@@ -48,13 +50,16 @@ while True:
         Checkout(HotelRooms.rooms)
         input("\nEnter to continue:")
     elif choice == 5:
+        Cleaning(HotelRooms.rooms)
+        input("\nEnter to continue:")
+    elif choice == 6:
         add = add_room(HotelRooms.rooms)
         print(add)
         input("\nEnter to continue:")
-    elif choice == 6:
+    elif choice == 7:
         remove = remove_room(HotelRooms.rooms)
         print(remove)
         input("\nEnter to continue:")
-    elif choice == 7:
+    elif choice == 8:
         exit_program()
         break
