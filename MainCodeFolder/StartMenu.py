@@ -1,11 +1,10 @@
 import HotelRooms
-import time
 from RoomAvailabilityAndNewRooms import room_availability
 from RoomAvailabilityAndNewRooms import add_room
 from RoomAvailabilityAndNewRooms import remove_room
 from Checkout import Checkout
 from Room_booking import book_room
-from searchtab import search_menu
+from SearchMenu import search_menu
 from Cleaning import Cleaning
 
 def startmenu():
@@ -22,7 +21,7 @@ def startmenu():
     while True:
         try:
             StartDecision = int(input("Enter a number (1-7)"))
-            if 1 <= StartDecision <= 7: #Käytetään numeroita 1-6 aloittamaan eri osat ohjelmaa ja turvataan, jos käyttäjä antaa väärän numeron.
+            if 1 <= StartDecision <= 8: #Käytetään numeroita 1-8 aloittamaan eri osat ohjelmaa ja turvataan, jos käyttäjä antaa väärän numeron.
                 return StartDecision
             else:
                 print("Incorrect value given. Try again.")
